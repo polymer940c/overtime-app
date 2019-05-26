@@ -1,4 +1,3 @@
-require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 
@@ -23,5 +22,5 @@ RSpec.configure do |config|
   config.before(:each) { DatabaseCleaner.start }
   config.after(:each) { DatabaseCleaner.clean }
   config.infer_spec_type_from_file_location!
-  config.filter_rails_from_backtrace
+  config.filter_rails_from_backtrace!
 end
