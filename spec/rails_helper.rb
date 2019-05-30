@@ -6,6 +6,9 @@ require 'rspec/rails'
 require 'spec_helper'
 require 'capybara/rails'
 
+include Warden::Test::Helpers 
+Warden.test_mode!
+
 begin
   ActiveRecord::Migration.maintain_test_schema!
 rescue ActiveRecord::PendingMigrationError => e
