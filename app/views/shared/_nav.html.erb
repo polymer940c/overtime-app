@@ -1,0 +1,29 @@
+<div class="page-header mb-4">
+  <h1>
+    Page Title <small>-woah so fast to make layout</small>
+  </h1>
+  <p>Made with <a href="https://www.layoutit.com/">LayoutIt</a></p>
+</div>
+<ul class="nav nav-tabs custom-nav">
+  <li class="nav-item">
+    <%= link_to "Home", root_path, class:"nav-link active" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to "Post", posts_path, class:"nav-link" %>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Messages</a>
+  </li>
+  <li class="nav-item dropdown ml-md-auto">
+    <span class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown">Account</span>
+    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+
+      <%= link_to "Edit user", edit_user_registration_path, class:"dropdown-item" %>
+      <%= link_to "Logout", destroy_user_session_path, class:"dropdown-item", method: :delete %>
+      <a class="dropdown-item" href="#">Another action</a> 
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div> 
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </li>
+</ul>

@@ -29,6 +29,6 @@ group :development, :test do
 end
 
 gem 'devise', '~> 4.2'
-gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+gem 'bootstrap', '~> 4.3.1'
 gem 'popper_js', '~> 1.14.5'
 gem 'jquery-rails'
