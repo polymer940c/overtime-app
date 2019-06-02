@@ -1,0 +1,14 @@
+<tr>
+  <td>
+    <%= post.id %>
+  </td>
+  <td>
+    <%= post.created_at.strftime("%b/%d/%Y") %>
+  </td>
+  <td>
+    <%= post.user.first_name %>
+  </td>
+  <td>
+    <%= truncate(post.rationale,  length: 15) %>
+  </td>
+</tr>
