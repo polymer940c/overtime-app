@@ -54,4 +54,35 @@ describe 'navigate' do
       expect(Post.last.user.id).to eq(@test_user.id)
     end
   end 
+
+  describe 'edit' do
+
+    it 'can be reached by clicking on edit on index page' do 
+      post = FactoryBot.create(:post)
+      visit posts_path
+      click_link("edit_post_#{post.id}")
+      expect(page.status_code).to eq(200)
+    end
+    
+    it 'can edit post' do 
+      post = FactoryBot.create(:post)
+      visit edit_post_path(post)
+
+      fill_in 'post[date]', with: Date.today
+      fill_in 'post[rationale]', with: 'new rationale'
+      click_on 'Save'
+      expect(page).to have_content('new rationale')
+    end
+    
+  end
+  
+  describe "new" do 
+    it 'can be reach on the home page' do 
+      visit posts_path
+      click_link('new_post_from_nav')
+      expect(page.status_code).to eq(200)
+    end
+    
+  end
+
 end

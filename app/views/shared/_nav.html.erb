@@ -12,7 +12,7 @@
     <%= link_to "Post", posts_path, class:"nav-link #{is_current_path?(posts_path)}" %>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#">Messages</a>
+    <%= link_to "New Post", new_post_path, class:"nav-link #{is_current_path?(new_post_path)}", id: "new_post_from_nav"%>
   </li>
   <li class="nav-item dropdown ml-md-auto">
     <span class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown">Account</span>
