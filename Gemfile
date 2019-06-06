@@ -34,3 +34,4 @@ gem 'devise', '~> 4.2'
 gem 'bootstrap', '~> 4.3.1'
 gem 'popper_js', '~> 1.14.5'
 gem 'jquery-rails'
+gem "gritter", "1.2.0"
