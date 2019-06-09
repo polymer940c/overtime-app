@@ -6,6 +6,13 @@ user = User.create(
         password: "asdfasdf",
         password_confirmation: "asdfasdf",
       )
+AdminUser.create( 
+        email: 'admin@user.test',
+        first_name: "adminF",
+        last_name: "adminL",
+        password: "asdfasdf",
+        password_confirmation: "asdfasdf",
+      )
 100.times do |n|
   Post.create!(
     date: Date.today, 
