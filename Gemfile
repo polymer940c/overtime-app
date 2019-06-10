@@ -36,3 +36,4 @@ gem 'popper_js', '~> 1.14.5'
 gem 'jquery-rails'
 gem "gritter", "1.2.0"
 gem "administrate"
+gem "pundit"
