@@ -74,6 +74,12 @@ describe 'navigate' do
       expect(page).to have_content('new rationale')
     end
     
+    it 'will not allow post to be edit if current user is not owner or admin' do 
+      user_with_posts = FactoryBot.create(:user_with_posts)
+      visit edit_post_path(user_with_posts.posts.first)
+      expect(current_path).to eq(root_path)
+    end
+    
   end
   
   describe "new" do 

@@ -6,7 +6,6 @@
 # you're free to overwrite the RESTful controller actions.
 module Admin
   def self.admin_types
-    # incase future more than adminUser to reach page
     ['AdminUser']
   end
 

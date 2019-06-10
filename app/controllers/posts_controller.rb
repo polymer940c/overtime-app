@@ -21,6 +21,7 @@ class PostsController < ApplicationController
   end
   
   def edit 
+    
   end
 
   def update 
@@ -39,6 +40,10 @@ class PostsController < ApplicationController
   def show 
   end
 
+  def admin_types
+    ['AdminUser']
+  end
+  
   private 
   def post_params
     params.require(:post).permit(:date, :rationale, :status)      

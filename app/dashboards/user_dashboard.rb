@@ -24,6 +24,7 @@ class UserDashboard < Administrate::BaseDashboard
     :posts,
     :id,
     :email,
+    :type,
   ].freeze
 
   SHOW_PAGE_ATTRIBUTES = [
@@ -47,4 +48,5 @@ class UserDashboard < Administrate::BaseDashboard
     :first_name,
     :last_name,
   ].freeze
+
 end

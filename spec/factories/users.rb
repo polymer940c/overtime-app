@@ -21,6 +21,13 @@ FactoryBot.define do
     end
   end
 
+  factory :non_authorized_user, class: "User" do
+    first_name { Faker::Name.first_name } 
+    last_name { Faker::Name.last_name }
+    email
+    password {"asdfasdf"}
+    password_confirmation {"asdfasdf"}
+  end
 
   factory :admin_user, class: "AdminUser" do
     first_name {"admin"}
