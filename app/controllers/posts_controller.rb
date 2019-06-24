@@ -3,52 +3,49 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
-  end 
-  
-  def new 
+  end
+
+  def new
     @post = Post.new
   end
-  
-  def create 
+
+  def create
     @post = Post.new(post_params)
-    @post.user_id = current_user.id 
-    
+    @post.user_id = current_user.id
+
     if @post.save
       redirect_to @post, notice: "post created"
     else
       render :new
     end
   end
-  
-  def edit 
-    
+
+  def edit
+    authorize @post
   end
 
-  def update 
+  def update
+    authorize @post
     if @post.update(post_params)
       redirect_to @post, notice: "post updated"
-    else 
-      render :edit 
+    else
+      render :edit
     end
   end
 
   def destroy
-    @post.delete 
+    @post.delete
     redirect_to posts_path, notice: "post deleted"
   end
 
-  def show 
+  def show
   end
 
-  def admin_types
-    ['AdminUser']
-  end
-  
-  private 
+  private
   def post_params
-    params.require(:post).permit(:date, :rationale, :status)      
+    params.require(:post).permit(:date, :rationale, :status)
   end
-  def set_post 
+  def set_post
     @post = Post.find(params[:id])
   end
 end
